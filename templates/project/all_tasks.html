@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    All Tasks
+{% endblock %}
+
+{% block content %}
+<div class="tasks">
+    {% for task in tasks %}
+    <div class="task">
+        <h2><span class="task-description">Title: </span>{{ task.name }}</h2>
+        <h4><span class="task-description">Project: </span>{{ task.project }}</h4>
+        <h4><span class="task-description">Status: </span><b>{{ task.status }}</b></h4>
+        <p><b><span class="task-description">Description: </span></b>{{ task.description }}</p>
+        <h4><span class="task-description">Priority: </span>{{ task.priority }}</h4>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
