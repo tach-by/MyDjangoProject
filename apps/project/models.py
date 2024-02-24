@@ -2,8 +2,12 @@ from django.db import models
 from apps.project.choises import STATUS_CHOICES, PRIORITY_CHOICES
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(
+        max_length=1500,
+        verbose_name="task details",
+        default="")
     creation_date = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self):
         return self.name

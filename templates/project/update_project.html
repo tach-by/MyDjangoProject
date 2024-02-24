@@ -1,11 +1,12 @@
 {% extends 'main.html' %}
+
 {% block title %}
-Create New Project
+Update project
 {% endblock %}
 
 {% block content %}
 <div class="new-project-title">
-    Create New Project
+    Update Project
 </div>
 <div class="new-project-container">
     <form method="post">
@@ -13,18 +14,20 @@ Create New Project
 
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" maxlength="25" placeholder="Title">
+            <input type="text" class="form-control" id="name" name="name"
+                   maxlength="25"  value="{{ project.name }}">
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description" maxlength="2000"
-                      placeholder="Description"></textarea>
+            <textarea class="form-control" id="description" name="description" maxlength="1500">
+                {{ project.description }}
+            </textarea>
         </div>
 
 
 
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 {% endblock %}
