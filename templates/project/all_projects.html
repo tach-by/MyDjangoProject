@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'project/css/styles.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'project/css/all_projects.css' %}">
+{% endblock %}
+{% block title %}
+    All Projects
+{% endblock %}
+
+{% block content %}
+    <div class="project">
+        {% for project in projects %}
+        <div class="project">
+            <h2><span class="project-description">Title: </span>{{ project.name }}</h2>
+            <h4><span class="project-description">Description: </span></b>{{ project.description }}</h4>
+            <h6><span class="project-description">Date of creation: </span></b>{{ project.creation_date }}</h6>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #2ECC71;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    background-color: #ecf0f1;
+}
+
+.project h2, .project h4, .project p {
+    margin: 5px 0;
+}
+
+.project h4 {
+    color: #16a085;
+}
+
+.project h4 b {
+    color: chocolate;
+}
+
+
+.project p {
+    color: #34495e;
+}
+
+
+.project h4[style*="color: chocolate"] {
+    color: #e67e22;
+}
+
+.project-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.project-link:hover {
+    background-color: #dfe6e9; /* Светлый фон при наведении */
+    border-color: #27ae60; /* Темно-зеленая граница при наведении */
+}
+
+.project-link:hover h2 {
+    color: #27ae60;
+}

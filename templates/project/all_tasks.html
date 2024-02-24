@@ -1,5 +1,9 @@
 {% extends 'main.html' %}
-
+{% load static %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'project/css/styles.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'project/css/all_tasks.css' %}">
+{% endblock %}
 {% block title %}
     All Tasks
 {% endblock %}
