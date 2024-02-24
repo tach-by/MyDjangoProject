@@ -5,6 +5,6 @@ app_name= 'router'
 
 urlpatterns=[
     path('', home, name='home'),
-    path('tasks/',include('apps.project.urls'))
+    path('project/',include('apps.project.urls'))
 
 ]
